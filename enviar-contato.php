@@ -128,23 +128,23 @@
 			<div data-modal="content">
 				<span data-modal="close"><i class="fa fa-times" aria-hidden="true"></i></span>
 				<p data-message class="message alert"></p>
-				<form class="form" action="enviar-contato.php" method="post">
+				<form class="form" action="enviar-mensagem.php" method="post">
 				   <div class="linha">
 				       <fieldset class="fieldset fd-100">
-				           <input type="text" class="input" placeholder="Seu nome" data-validate="nome">
+				           <input type="text" class="input" placeholder="Seu nome">
 				       </fieldset>
 				   </div>
 				   <div class="linha">
 				       <fieldset class="fieldset fd-50">
-				           <input type="email" class="input" placeholder="Seu e-mail" data-validate="email">
+				           <input type="email" class="input" placeholder="Seu e-mail">
 				       </fieldset>
 				        <fieldset class="fieldset fd-50">
-				           <input type="text" class="input" placeholder="Seu telefone ?" data-mask="tel">
+				           <input type="email" class="input" placeholder="Seu telefone ?" data-mask="tel">
 				       </fieldset>
 				   </div>
 				   <div class="linha">
 				       <fieldset class="fieldset fd-100">
-				           <textarea name="" id="" cols="30" rows="10" class="input" placeholder="Conte-me: no que eu posso ajudar?" data-validate="message"></textarea>
+				           <textarea name="" id="" cols="30" rows="10" class="input" placeholder="Conte-me: no que eu posso ajudar?"></textarea>
 				       </fieldset>
 				   </div>
 				   <div class="linha">
@@ -169,54 +169,55 @@
       var gabrieluizramos = {
           config : {
               patterns : {
-    			email : /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i ,
+        			email : /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i ,
         		} ,
         		progress : {} ,
         		url: $( '[data-form]' ).attr( 'action' ) ,
         		data : {}
-              } ,
+              progress : {}
+          } ,
            elements: {
                   willValidate : [ '[data-validate="nome"]' , '[data-validate="email"]' , '[data-validate="message"]' ] ,
                   messager : '[data-message]' ,
                   button : '[data-send]'
-            },
+              },
           functions: {
               returnValid : function(){
-    			for ( campo in gabrieluizramos.elements.willValidate ) {
-    				var valor = $( gabrieluizramos.elements.willValidate[ campo ] ).val();
-    				var attr = $( gabrieluizramos.elements.willValidate[ campo ] ).attr( 'data-validate' )
-    				if ( !valor || ( attr == "email" && !gabrieluizramos.config.patterns.email.test( valor ) ) ) return false;
-    				else {
-    					gabrieluizramos.config.progress[ attr ] = true;
-    					gabrieluizramos.config.data[ attr ] = valor;
-    				}
-    			}
-    			return true;
-    		}
+			for ( campo in gabrieluizramos.elements.willValidate ) {
+				var valor = $( gabrieluizramos.elements.willValidate[ campo ] ).val();
+				var attr = $( gabrieluizramos.elements.willValidate[ campo ] ).attr( 'data-validate' )
+				if ( !valor || ( attr == "email" && !gabrieluizramos.config.patterns.email.test( valor ) ) ) return false;
+				else {
+					gabrieluizramos.config.progress[ attr ] = true;
+					gabrieluizramos.config.data[ attr ] = valor;
+				}
+			}
+			return true;
+		}
           } ,
           actions : {
-            callMessage : function( type ){
-    			type = parseInt( type );
-    			switch( type ){
-    				case 0:
-    				$( gabrieluizramos.elements.messager ).html( 'Falha ao enviar mensagem. Por favor, tente novamente!' ).show();
-    				break;
-    				case 1:
-    				$( gabrieluizramos.elements.messager ).html( 'Mensagem enviada com sucesso!' ).show();
-    				break;
-    				case 2:
-    				$( gabrieluizramos.elements.messager ).html( 'Enviando mensagem...' ).show();
-    				break;
-    				case 3:
-    				$( gabrieluizramos.elements.messager ).html( 'Por favor, preencha os dados corretamente' ).show();
-    				break;
-    			}
-    		} ,
-    		eraseMessage : function(){
-    			setTimeout( function(){
-    				$( gabrieluizramos.elements.messager ).hide( 200 );
-    			}, 5000 );
-    		}
+              callMessage : function( type ){
+			type = parseInt( type );
+			switch( type ){
+				case 0:
+				$( gabrieluizramos.elements.messager ).html( 'Falha ao enviar mensagem. Por favor, tente novamente!' ).show();
+				break;
+				case 1:
+				$( gabrieluizramos.elements.messager ).html( 'Mensagem enviada com sucesso!' ).show();
+				break;
+				case 2:
+				$( gabrieluizramos.elements.messager ).html( 'Enviando mensagem...' ).show();
+				break;
+				case 3:
+				$( gabrieluizramos.elements.messager ).html( 'Por favor, preencha os dados corretamente' ).show();
+				break;
+			}
+		} ,
+		eraseMessage : function(){
+			setTimeout( function(){
+				$( gabrieluizramos.elements.messager ).hide( 200 );
+			}, 5000 );
+		}
           } ,
           events : {
               init: function(){

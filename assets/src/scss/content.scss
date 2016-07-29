@@ -164,6 +164,7 @@
     }
 }
 
+
 @import "_components/_form";
 
 .form{
@@ -172,4 +173,8 @@
         //text-transform:uppercase;
         font-weight:100;
     }
+}
+
+.message{
+    display:none;
 }
