@@ -124,6 +124,7 @@
         width:calc( 100% / 3 );
         height:50%;
         min-height:350px;
+        cursor:pointer;
         &:nth-child( odd ){
             .front{
                background:#FFF;
