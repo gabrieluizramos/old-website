@@ -8,7 +8,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Cache-Control: max-age=3600, must-revalidate"/>
-    <!-- /META -->
+    <link rel="shortcut icon" href="/assets/dist/img/favicon.png" type="image/x-icon" />
+    <meta name="theme-color" content="#460303" />
+    <!-- for Google -->
+	<meta name="description" content="Desenvolvedor Web » Gabriel Ramos" />
+	<meta name="company" content="Gabriel Ramos" />  
+	<meta name="keywords" content="Desenvolvimento Web, Front-end, Back-end, Web Development">  
+	<meta name="author" content="Gabriel Ramos" />
+	<meta name="copyright" content="Gabriel Luiz Ramos" />
+	<meta name="Robots" content="all">
+	<meta name="Robots" content="index, follow">
+	<meta name="distribution" content="Global">
+	<meta name="rating" content="General">
+	<meta name="revisit-after" content="5">
+	<meta http-equiv="expires" content="0">
+	<!-- for Facebook -->   
+	<meta property="og:title" content="Gabriel Ramos"> 
+	<meta property="og:description" content="Desenvolvedor Web"> 
+	<meta property="og:url" content="http://gabrieluizramos.com.br"> 
+	<meta property="og:type" content="http://gabrieluizramos.com.br">
+	<meta property="og:site_name" content="gabrieluizramos"> 
+	<meta property="og:image" content="/assets/dist/img/banner-site.png" />
+	<!-- for Twitter -->          
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Gabriel Ramos" />
+	<meta name="twitter:description" content="Desenvolvedor Web" />
+	<meta name="twitter:image" content="/assets/dist/img/banner-site.png" />
+	<!-- /META -->
 	<title>Gabriel Ramos » Desenvolvedor Web</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="/assets/dist/css/style.css" type="text/css" />
