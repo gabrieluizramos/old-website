@@ -34,7 +34,7 @@
             </li>
             <li class="widget-item">
                 <div class="front">
-                   <i class="fa fa-suitcase title" aria-hidden="true"></i>
+                    <i class="fa fa-briefcase title" aria-hidden="true"></i>
                 </div>
                 <div class="back">
                      <span class="title">trajetória</span>
