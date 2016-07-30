@@ -144,7 +144,7 @@
 				   </div>
 				   <div class="linha">
 				       <fieldset class="fieldset fd-100">
-				           <textarea name="" id="" cols="30" rows="10" class="input" placeholder="Conte-me: no que eu posso ajudar?" data-validate="message"></textarea>
+				           <textarea name="" id="" cols="30" rows="10" class="input" placeholder="Conte-me: no que eu posso ajudar?" data-validate="mensagem"></textarea>
 				       </fieldset>
 				   </div>
 				   <div class="linha">
@@ -176,7 +176,7 @@
         		data : {}
               } ,
            elements: {
-                  willValidate : [ '[data-validate="nome"]' , '[data-validate="email"]' , '[data-validate="message"]' ] ,
+                  willValidate : [ '[data-validate="nome"]' , '[data-validate="email"]' , '[data-validate="mensagem"]' ] ,
                   messager : '[data-message]' ,
                   button : '[data-send]'
             },
@@ -220,7 +220,7 @@
           } ,
           events : {
               init: function(){
-                  $( gabrieluizramos.elements.clicker ).on( 'click' , function( e ){
+                  $( gabrieluizramos.elements.button ).on( 'click' , function( e ){
     				e.preventDefault();
     				if ( !gabrieluizramos.functions.returnValid() ) {
     					gabrieluizramos.actions.callMessage( 3 );
@@ -231,7 +231,8 @@
     					}
     					gabrieluizramos.actions.callMessage( 2 );
     					$.post( gabrieluizramos.config.url , gabrieluizramos.config.data , function( dataRES ){
-    						dataRES = parseInt( dataRES );
+    					//	dataRES = parseInt( dataRES );
+    						console.log( dataRES );
     						if ( dataRES ) {
     							gabrieluizramos.actions.callMessage( 1 );
     						}
