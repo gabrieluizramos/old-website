@@ -1,7 +1,7 @@
 <?php
 if ( $_POST && !empty( $_POST['mensagem'] ) && !empty( $_POST['nome'] ) && !empty( $_POST['email'] ) ) {
 	
-	require_once ( $_SERVER['DOCUMENT_ROOT'].'classes/phpmailer/class.phpmailer.php' );
+	require_once ( $_SERVER['DOCUMENT_ROOT'].'/classes/phpmailer/class.phpmailer.php' );
 
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
@@ -28,7 +28,7 @@ if ( $_POST && !empty( $_POST['mensagem'] ) && !empty( $_POST['nome'] ) && !empt
 	$mailer->SMTPDebug = 1;
 	$mailer->Port = 587; //Indica a porta de conexão para a saída de e-mails. Utilize obrigatoriamente a porta 587.
 
-	$mailer->Host = 'smtp.heyfeelix.com'; //Onde em 'servidor_de_saida' deve ser alterado por um dos hosts abaixo:
+	$mailer->Host = 'smtp.gabrieluizramos.com.br'; //Onde em 'servidor_de_saida' deve ser alterado por um dos hosts abaixo:
 	//Para cPanel: 'mail.dominio.com.br';
 	//Para Plesk 11 / 11.5: 'smtp.dominio.com.br';
 
@@ -37,7 +37,7 @@ if ( $_POST && !empty( $_POST['mensagem'] ) && !empty( $_POST['nome'] ) && !empt
 
 	$mailer->SMTPAuth = true; //Define se haverá ou não autenticação no SMTP
 	$mailer->Username = 'contato@gabrieluizramos.com.br'; //Informe o e-mai o completo
-	$mailer->Password = 'c@ntat8f&liX!'; //Senha da caixa postal
+	$mailer->Password = 'c()nt@t3t!54A'; //Senha da caixa postal
 	$mailer->FromName = 'Gabriel Ramos'; //Nome que será exibido para o destinatário
 	$mailer->From = 'contato@gabrieluizramos.com.br'; //Obrigatório ser a mesma caixa postal indicada em "username"
 	$mailer->AddAddress('gabriel.luiz.ramos@gmail.com'); //Destinatário
@@ -46,13 +46,13 @@ if ( $_POST && !empty( $_POST['mensagem'] ) && !empty( $_POST['nome'] ) && !empt
 	$mailer->Body    = $mensagem;
 
 	if( $mailer->Send() ){
-		echo true;
+		echo 1;
 	}
 	else{
-		echo false;
+		echo 0;
 	}
 }
 else{
-	echo false;
+	echo 0;
 }
 ?>
