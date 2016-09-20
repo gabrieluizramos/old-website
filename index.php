@@ -103,7 +103,7 @@
                          <li class="social-item"><a href="https://www.behance.net/gabrieluizramos" class="social-link fa fa-behance-square" target="_blank"></a></li>
                          <li class="social-item"><a href="http://github.com/gabrieluizramos/" class="social-link fa  fa-github" target="_blank"></a></li>
                          <li class="social-item"><a href="https://br.linkedin.com/in/gabrieluizramos" class="social-link fa fa-linkedin-square" target="_blank"></a></li>
-                         <li class="social-item"><a href="https://www.facebook.com/gabreeu.ramos" class="social-link fa fa-facebook-official" target="_blank"></a></li>
+                         <li class="social-item"><a href="https://www.facebook.com/gabrieluizramos" class="social-link fa fa-facebook-official" target="_blank"></a></li>
                          <li class="social-item"><a href="http://instagram.com/gabrieluizramos" class="social-link fa fa-instagram" target="_blank"></a></li>
                      </ul>
                 </div>
@@ -144,7 +144,7 @@
 				   </div>
 				   <div class="linha">
 				       <fieldset class="fieldset fd-100">
-				           <textarea name="" id="" cols="30" rows="10" class="input" placeholder="Conte-me: no que eu posso ajudar?" data-validate="mensagem"></textarea>
+				           <textarea name="" id="" cols="30" rows="5" class="input" placeholder="Conte-me: no que eu posso ajudar?" data-validate="mensagem"></textarea>
 				       </fieldset>
 				   </div>
 				   <div class="linha">
