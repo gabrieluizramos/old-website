@@ -40,6 +40,4 @@ const config = {
 
 };
 
-console.log('====path is', path.resolve(__dirname, '/assets/dist/'))
-
 module.exports = config;
