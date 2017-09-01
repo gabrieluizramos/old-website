@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "publish": "webpacl && git commit -am. && git push"
+    "deploy": "webpacl && git commit -am. && git push"
   },
   "repository": {
     "type": "git",
