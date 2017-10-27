@@ -97,13 +97,42 @@ var GHFetcher = function () {
 
     this.username = username;
     this.reposURL = 'https://api.github.com/users/' + this.username + '/repos';
-    this.branchesURL = null;
+    this.repoForBranchUrl = 'https://api.github.com/repos/' + this.repoName + '/devagenda/branches';
+
+    this.start();
   }
 
   _createClass(GHFetcher, [{
     key: 'fetchRepos',
     value: function fetchRepos() {
-      return fetch(this.reposURL);
+      return fetch(this.reposURL).then(function (response) {
+        return response.json();
+      });
+    }
+  }, {
+    key: 'fetchBranchesByRepo',
+    value: function fetchBranchesByRepo(repo) {
+      this.repoName = repo;
+      console.log('===brancheForUrl', this.repoForBranchUrl);
+      // return fetch(this.repoForBranchUrl).then(response => response.json());
+    }
+  }, {
+    key: 'loadReposWithGHBranches',
+    value: function loadReposWithGHBranches() {
+      for (var repo in this.repos) {
+        this.fetchBranchesByRepo(this.repos[repo].name);
+      }
+    }
+  }, {
+    key: 'start',
+    value: function start() {
+      var _this = this;
+
+      this.fetchRepos().then(function (data) {
+        _this.repos = data;
+        console.log('===data', data);
+        return _this.loadReposWithGHBranches();
+      });
     }
   }]);
 
