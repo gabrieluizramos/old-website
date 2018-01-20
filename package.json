@@ -30,7 +30,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "deploy": "webpack && git commit -am. && git push"
+    "deploy": "webpack -p && git commit -am. && git push"
   },
   "repository": {
     "type": "git",
