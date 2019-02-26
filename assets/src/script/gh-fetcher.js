@@ -1,6 +1,5 @@
 
 class GHFetcher {
-
   constructor(username) {
     this.username = username;
     this.reposURL = `https://api.github.com/users/${this.username}/repos`;
