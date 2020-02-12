@@ -24,6 +24,7 @@ module.exports = {
         trackingId: "UA-105850294-1",
       },
     },
+    `gatsby-plugin-styled-components`,
     ...require('@gabrieluizramos/preferences/gatsby/config')
   ],
 }
