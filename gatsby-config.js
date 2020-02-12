@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Gabriel Ramos`,
     description: ``,
     author: `@gabrieluizramos`,
   },
@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Gabriel ramos`,
+        short_name: `gabrieluizramos`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
