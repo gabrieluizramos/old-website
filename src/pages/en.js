@@ -7,8 +7,8 @@ import Content from '../components/content';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <Content language="en" />
+    <SEO title="Home" lang="en" />
+    <Content lang="en" />
   </Layout>
 );
 

@@ -25,7 +25,7 @@ const content = {
   )
 }
 
-const Content = ({ language = 'pt' }) => content[language];
+const Content = ({ lang = 'pt' }) => content[lang];
 
 export default Content;
 
