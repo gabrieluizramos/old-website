@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from '@gabrieluizramos/preferences/components';
+
 import * as S from './styles';
 
 import Button from './language/button';
@@ -7,21 +9,21 @@ import Button from './language/button';
 const content = {
   pt: (
     <>
-      <p class="description">
-          Às vezes eu programo (e você pode acompanhar meus <a href="https://github.com/gabrieluizramos/" target="_blank">códigos</a>, e algumas <a href="https://www.behance.net/gabrieluizramos" target="_blank">telas</a> que desenvolvi), <a href="/blog">escrevo</a> e tiro algumas <a href="https://www.instagram.com/gabrieluizramos/" target="_blank">fotos</a>.
+      <p>
+          Às vezes eu programo (e você pode acompanhar meus <Link href="https://github.com/gabrieluizramos/" target="_blank">códigos</Link>, algumas <Link href="https://www.behance.net/gabrieluizramos" target="_blank">telas</Link> e algumas <Link href="http://codepen.io/gabrieluizramos/" target="_blank">brincadeiras</Link> que desenvolvi), <Link href="/blog">escrevo</Link> e tiro algumas <Link href="https://www.instagram.com/gabrieluizramos/" target="_blank">fotos</Link>.
       </p>
-      <p class="description">
-          Caso queira, você pode entrar em contato comigo por <a href="mailto:gabriel.luiz.ramos@gmail.com">e-mail</a> ou também saber um pouco mais sobre minha <a href="https://www.linkedin.com/in/gabrieluizramos/" target="_blank">experiência profissional</a>.
+      <p>
+          Caso queira, você pode entrar em contato comigo por <Link href="mailto:gabriel.luiz.ramos@gmail.com">e-mail</Link> ou também saber um pouco mais sobre minha <Link href="https://www.linkedin.com/in/gabrieluizramos/" target="_blank">experiência profissional</Link>.
       </p>
     </>
   ),
   en: (
     <>
-      <p class="description">
-          Sometimes I build things (and you can check some <a href="https://github.com/gabrieluizramos/" target="_blank">codes</a> and <a href="https://www.behance.net/gabrieluizramos" target="_blank">screens</a> that I've built), <a href="/blog">write</a> (currently in portuguese only) and shot some <a href="https://www.instagram.com/gabrieluizramos/" target="_blank">pictures</a>.
+      <p>
+          Sometimes I build things (and you can check some <Link href="https://github.com/gabrieluizramos/" target="_blank">codes</Link>, <Link href="https://www.behance.net/gabrieluizramos" target="_blank">screens</Link> and <Link href="http://codepen.io/gabrieluizramos/" target="_blank">funny stuff</Link> that I've built), <Link href="/blog">write</Link> (currently in portuguese only) and shoot some <Link href="https://www.instagram.com/gabrieluizramos/" target="_blank">pictures</Link>.
       </p>
-      <p class="description">
-          If you want, you can <a href="mailto:gabriel.luiz.ramos@gmail.com">e-mail me</a> and also check my <a href="https://www.linkedin.com/in/gabrieluizramos/" target="_blank">professional experience</a>.
+      <p>
+          If you want, you can <Link href="mailto:gabriel.luiz.ramos@gmail.com">e-mail me</Link> and also check my <Link href="https://www.linkedin.com/in/gabrieluizramos/" target="_blank">professional experience</Link>.
       </p>
     </>
   )

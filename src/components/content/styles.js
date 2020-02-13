@@ -5,4 +5,5 @@ export const Content = styled.section`
   margin: 0 auto;
   text-align: center;
   position: relative;
+  line-height: 2;
 `;
