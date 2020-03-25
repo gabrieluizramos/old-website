@@ -3,6 +3,7 @@ module.exports = {
     title: `Gabriel Ramos`,
     description: ``,
     author: `@gabrieluizramos`,
+    siteUrl: 'https://gabrieluizramos.com.br'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +26,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    ...require('@gabrieluizramos/preferences/gatsby/config')
+    ...require('@gabrieluizramos/preferences/gatsby/config'),
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        additionalSitemaps: [
+          {
+            name: 'blog',
+            url: 'https://gabrieluizramos.com.br/blog/sitemap.xml'
+          }
+        ]
+      }
+    }
   ],
 }

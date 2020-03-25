@@ -8,6 +8,7 @@
     "@gabrieluizramos/preferences": "github:gabrieluizramos/preferences",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-advanced-sitemap": "^1.5.2",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.39",
